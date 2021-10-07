@@ -3,7 +3,7 @@ catalogue==2.0.4
 click==7.1.2
 ipykernel==5.5.5
 pathy==0.6.0
-pt_core_news_sm @https://github.com/explosion/spacy-models/releases/tag/pt_core_news_sm-3.0.0/pt_core_news_sm-3.0.0.tar.gz
+pt_core_news_sm @https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.0.0/pt_core_news_sm-3.0.0.tar.gz
 pydantic==1.7.4
 pydeck==0.6.2
 spacy==3.0.6

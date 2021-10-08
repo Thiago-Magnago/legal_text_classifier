@@ -64,7 +64,7 @@ def prediction(text, option):
         pred = 'RELEVANTE'
         pred_proba = round(prediction_proba[0][0]*100, 0)
     else:
-        pred = 'IRRELEVANTE'
+        pred = 'NÃO RELEVANTE'
         pred_proba = round(prediction_proba[0][1]*100, 0)
         
         # se proba > 80% retorna pred
@@ -86,8 +86,9 @@ def prediction(text, option):
 def main():       
     # front end elements of the web page 
     html_temp = """ 
-    <div style ="background-color:green;padding:13px"> 
-    <h1 style ="color:white;text-align:center;">Classificador de Atos Legais</h1> 
+    <div style="background-color:#006298;padding:12px;margin-bottom:16px;border-radius:4px; "> 
+    <h1 style ="color:white;text-align:center;padding:0">ATOS LEGAIS</h1>
+    <h3 style ="color:white;text-align:center;padding:0;">INTELIGÊNCIA ARTIFICIAL</h3>
     </div> 
     """
       
@@ -108,7 +109,7 @@ def main():
     if option == 'Estadual' or option == 'Federal':
         if st.button("Classificar"): 
             result, proba = prediction(text, option)
-            st.success('Para a Cia, este ato legal é {}, com {}% de probabilidade.'.format(result, proba))
+            st.info('Este ato legal é {}, com {}% de probabilidade.'.format(result, proba))
 
         
 if __name__=='__main__':

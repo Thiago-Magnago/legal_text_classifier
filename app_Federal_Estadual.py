@@ -58,17 +58,33 @@ def prediction(text, option):
     else:
         prediction = classifier_est.predict([lemma])
         prediction_proba = classifier_est.predict_proba([lemma])
-     
-        
+    
+           
+            
     if prediction == 1:
-        pred = 'RELEVANTE'
         pred_proba = round(prediction_proba[0][0]*100, 0)
+        if prediction_proba[0][0]>=0.8:
+            pred = 'RELEVANTE'
+        else:
+            pred = 'RELEVANTE/Indefinido'
+                    
     else:
-        pred = 'NÃO RELEVANTE'
         pred_proba = round(prediction_proba[0][1]*100, 0)
+        if prediction_proba[0][1]>=0.8:
+            pred = 'NÃO RELEVANTE'
+        else:
+            pred = 'NÃO RELEVANTE/Indefinido'
+            
         
-        # se proba > 80% retorna pred
-        # else retorna indefinido
+        
+    #if prediction == 1:
+        #pred = 'RELEVANTE'
+        #pred_proba = round(prediction_proba[0][0]*100, 0)
+    #else:
+        #pred = 'NÃO RELEVANTE'
+        #pred_proba = round(prediction_proba[0][1]*100, 0)
+        
+       
     return pred, pred_proba
     
     
@@ -97,9 +113,9 @@ def main():
       
     # following lines create boxes in which user can enter data required to make prediction 
      
-    text = st.text_area("Cole o texto do ato legal")
+    text = st.text_area("Cole o texto do ato legal", max_chars=500000, height=100)
     result =""
-      
+    
     # to select the legal text abrangency
     option = st.selectbox(
     'Indique a abrangência do ato legal', ['', 'Estadual', 'Federal'])

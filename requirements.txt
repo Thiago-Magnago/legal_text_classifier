@@ -6,13 +6,13 @@ pathy==0.6.0
 pt_core_news_sm @https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.0.0/pt_core_news_sm-3.0.0.tar.gz
 pydantic==1.7.4
 pydeck==0.6.2
-spacy==3.0.6
+spacy==3.0.8
 spacy-legacy==3.0.8
 spacy-streamlit==1.0.2
 srsly==2.4.1
 streamlit==1.9.0
 thinc==8.0.8
-typer==0.3.0
+typer==0.3.2
 validators==0.18.2
 scikit-learn==0.23.2
 numpy==1.20.3

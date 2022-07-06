@@ -1,7 +1,6 @@
 base58==2.1.0
 catalogue==2.0.4
 click
-click._bashcomplete
 ipykernel==5.5.5
 pathy==0.6.0
 pt_core_news_sm @https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.0.0/pt_core_news_sm-3.0.0.tar.gz
@@ -11,7 +10,7 @@ spacy==3.0.6
 spacy-legacy==3.0.8
 spacy-streamlit==1.0.2
 srsly==2.4.1
-streamlit==0.89.0
+streamlit
 thinc==8.0.8
 typer
 validators==0.18.2

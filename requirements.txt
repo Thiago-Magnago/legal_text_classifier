@@ -1,6 +1,6 @@
 base58==2.1.0
 catalogue==2.0.4
-click==7.1.2
+click
 ipykernel==5.5.5
 pathy==0.6.0
 pt_core_news_sm @https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.0.0/pt_core_news_sm-3.0.0.tar.gz
@@ -12,7 +12,7 @@ spacy-streamlit
 srsly==2.4.1
 streamlit
 thinc==8.0.8
-typer==0.3.2
+typer
 validators==0.18.2
 scikit-learn==0.23.2
 numpy==1.20.3
